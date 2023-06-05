@@ -71,6 +71,19 @@ public class Main {
             JLabel score111 = new JLabel(resizedIcon); // Create the label with the resized image
             score111.setBounds(120, 207, 60, 60); // Set the position and size of the label
             score111.setFont(new Font("assistant", Font.BOLD, 20));
+            JLabel score2 = new JLabel(orbit.getName()); // Create the label without text initially
+            score2.setBounds(190, 300, 350, 30); // Set the position and size of the label
+            score2.setFont(new Font("assistant", Font.BOLD, 30));
+            JLabel score22 = new JLabel(orbit.getNumber()); // Create the label without text initially
+            score22.setBounds(190, 333, 350, 30); // Set the position and size of the label
+            score22.setFont(new Font("assistant", Font.BOLD, 20));
+            // Resize the image to 60x60 pixels
+            ImageIcon icon2 = new ImageIcon(orbit.getPhoto());
+            Image image2 = icon2.getImage().getScaledInstance(60, 60, Image.SCALE_SMOOTH);
+            ImageIcon resizedIcon2 = new ImageIcon(image2);
+            JLabel score222 = new JLabel(resizedIcon); // Create the label with the resized image
+            score222.setBounds(120, 300, 60, 60); // Set the position and size of the label
+            score222.setFont(new Font("assistant", Font.BOLD, 20));
             frame.add(panel);
             panel.add(label);
             panel.add(label1);
@@ -79,7 +92,7 @@ public class Main {
             panel.add(label4);
             panel.add(score1);
             panel.add(score11);
-            panel.add(score111);            panel.add(score1);
+            panel.add(score111); panel.add(score1); panel.add(score222); panel.add(score22); panel.add(score2);
             panel.add(score11);
 
             frame.setVisible(true);
