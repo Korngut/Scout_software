@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,17 +58,19 @@ public class Main {
             JLabel label4 = new JLabel("עדכוני סקואט אחרונים:");
             label4.setBounds(1525, 140, 350, 30); // Set the position and size of the label
             label4.setFont(new Font("assistant", Font.BOLD, 27));
-            JLabel score1 = new JLabel(); // Create the label without text initially
-            score1.setBounds(180, 210, 350, 30); // Set the position and size of the label
+            JLabel score1 = new JLabel(orbit.getName()); // Create the label without text initially
+            score1.setBounds(190, 210, 350, 30); // Set the position and size of the label
             score1.setFont(new Font("assistant", Font.BOLD, 30));
-            JLabel score11 = new JLabel(); // Create the label without text initially
-            score11.setBounds(180, 233, 350, 30); // Set the position and size of the label
+            JLabel score11 = new JLabel(orbit.getNumber()); // Create the label without text initially
+            score11.setBounds(190, 233, 350, 30); // Set the position and size of the label
             score11.setFont(new Font("assistant", Font.BOLD, 20));
+            // Resize the image to 60x60 pixels
             ImageIcon icon1 = new ImageIcon(orbit.getPhoto());
-            JLabel score111 = new JLabel(icon1); // Create the label without text initially
-            score111.setBounds(180, 233, 350, 30); // Set the position and size of the label
+            Image image = icon1.getImage().getScaledInstance(60, 60, Image.SCALE_SMOOTH);
+            ImageIcon resizedIcon = new ImageIcon(image);
+            JLabel score111 = new JLabel(resizedIcon); // Create the label with the resized image
+            score111.setBounds(120, 207, 60, 60); // Set the position and size of the label
             score111.setFont(new Font("assistant", Font.BOLD, 20));
-
             frame.add(panel);
             panel.add(label);
             panel.add(label1);
@@ -75,7 +78,9 @@ public class Main {
             panel.add(label3);
             panel.add(label4);
             panel.add(score1);
-            panel.add(score11);             panel.add(score111);
+            panel.add(score11);
+            panel.add(score111);            panel.add(score1);
+            panel.add(score11);
 
             frame.setVisible(true);
         });
