@@ -82,6 +82,24 @@ public class Main {
             score33.setBounds(130, 423, 350, 30); // Set the position and size of the label
             score33.setFont(new Font("assistant", Font.BOLD, 20));
             // Resize the image to 60x60 pixels
+            JLabel Defen1 = new JLabel(Excalibur.getName()); // Create the label without text initially
+            Defen1.setBounds(830, 210, 350, 30); // Set the position and size of the label
+            Defen1.setFont(new Font("assistant", Font.BOLD, 30));
+            JLabel Defen11 = new JLabel(Excalibur.getNumber()); // Create the label without text initially
+            Defen11.setBounds(830, 237, 350, 30); // Set the position and size of the label
+            Defen11.setFont(new Font("assistant", Font.BOLD, 20));
+            JLabel Defen2 = new JLabel(SteamPunk.getName()); // Create the label without text initially
+            Defen2.setBounds(830, 300, 350, 30); // Set the position and size of the label
+            Defen2.setFont(new Font("assistant", Font.BOLD, 30));
+            JLabel Defen22 = new JLabel(SteamPunk.getNumber()); // Create the label without text initially
+            Defen22.setBounds(830, 333, 350, 30); // Set the position and size of the label
+            Defen22.setFont(new Font("assistant", Font.BOLD, 20));
+            JLabel Defen3 = new JLabel(orbit.getName()); // Create the label without text initially
+            Defen3.setBounds(830, 390, 350, 30); // Set the position and size of the label
+            Defen3.setFont(new Font("assistant", Font.BOLD, 30));
+            JLabel Defen33 = new JLabel(orbit.getNumber()); // Create the label without text initially
+            Defen33.setBounds(830, 423, 350, 30); // Set the position and size of the label
+            Defen33.setFont(new Font("assistant", Font.BOLD, 20));
 
             frame.add(panel);
             panel.add(label);
@@ -91,8 +109,8 @@ public class Main {
             panel.add(label4);
             panel.add(score1);
             panel.add(score11);
-            panel.add(score1); panel.add(score22); panel.add(score2); panel.add(score3); panel.add(score33);
-            panel.add(score11);
+            panel.add(score1); panel.add(score22); panel.add(score2); panel.add(score3); panel.add(score33); panel.add(Defen1); panel.add(Defen11); panel.add(Defen2);
+            panel.add(score11); panel.add(Defen22); panel.add(Defen3); panel.add(Defen33);
 
             frame.setVisible(true);
         });
